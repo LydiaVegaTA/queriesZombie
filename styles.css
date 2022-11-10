@@ -1,0 +1,561 @@
+* {
+  margin: 0;
+}
+
+/* CENTRAR LA IMAGEN DE FONDO Y DEJARLA ESTÁTICA */
+body {
+  background-image     : url(./imagenes/fondo.jpg);
+  background-position  : center;
+  background-attachment: fixed;
+  background-repeat    : no-repeat;
+}
+
+/* BAJAR TODOS LOS ELEMENTOS QUE SE ENCUENTRAN EN EL DIV PADRE */
+
+.padre {
+  position: fixed;
+  bottom  : 20vh;
+}
+
+/* COMIENZA LA MAGIA: 
+ABRE EL NAVEGADOR EN MODO INSPECCIONAR 
+COMIENZA DESDE LA RESOLUCIÓN MÁS PEQUEÑA Y VE AUMENTANDO POCO A POCO */
+
+
+/* NO HAY NADA, SOLO EL FONDO */
+@media screen and (max-width: 150px) {
+
+  .fondo {
+    display: none;
+  }
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    display: none;
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* SE VE LA PLANTA SOLA CON LA PELOTA*/
+@media screen and (min-device-width: 150px) and (max-width: 240px) {
+
+  .fondo {
+    display: none;
+  }
+
+  .planta1 {
+    position  : fixed;
+    width     : 150px;
+    margin-top: 0px;
+  }
+
+  .pelota {
+    display: none;
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* SE VE LA PLANTA CON LA PELOTA */
+@media screen and (min-device-width: 241px) and (max-width: 280px) {
+
+
+  .planta1 {
+    position  : fixed;
+    width     : 150px;
+    margin-top: 0px;
+  }
+
+  .pelota {
+    width      : 50px;
+    margin-top : 20px;
+    margin-left: 150px;
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* LA PLANTA SE VA SALIENDO DE LA PANTALLA Y LA PELOTA ALEJÁNDOSE */
+@media screen and (min-device-width: 281px) and (max-width: 350px) {
+
+
+  .planta1 {
+    position  : fixed;
+    width     : 150px;
+    margin-top: 0px;
+  }
+
+  .pelota {
+    width      : 50px;
+    margin-top : 20px;
+    margin-left: 200px;
+    transform  : rotate(20deg);
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+
+/* LA PLANTA SE ALEJA, SE CENTRA EN LA PANTALLA LA PELOTA */
+@media screen and (min-device-width: 350px) and (max-width: 450px) {
+
+
+  .planta1 {
+    position  : fixed;
+    width     : 150px;
+    margin-top: 0px;
+    margin-left: -50px;
+  }
+
+  .pelota {
+    width      : 50px;
+    margin-top : 20px;
+    margin-left: 300px;
+    transform  : rotate(40deg);
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* LA PLANTA CASI NO SE VE, SALE DE LA PANTALLA*/
+@media screen and (min-device-width: 450px) and (max-width: 550px) {
+
+
+  .planta1 {
+    position   : fixed;
+    width      : 150px;
+    margin-top : 0px;
+    margin-left: -100px;
+  }
+
+  .pelota {
+    width      : 50px;
+    margin-top : 20px;
+    margin-left: 300px;
+    transform  : rotate(60deg);
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* LA PLANTA NO SE VE, LA PELOTA SE CENTRA APARECE MANO ZOMBIE*/
+@media screen and (min-device-width: 550px) and (max-width: 651px) {
+
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    width      : 50px;
+    margin-top : 20px;
+    margin-left: 300px;
+    transform  : rotate(80deg);
+  }
+
+  .mano {
+    display    : fixed;
+    position   : fixed;
+    width      : 150px;
+    margin-left: 150px;
+    bottom     : 0;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+
+}
+
+/* LA PELOTA SE VA CENTRANDO APARECE ZOMBIE*/
+@media screen and (min-device-width: 651px) and (max-width: 750px) {
+
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    width      : 50px;
+    margin-top : 20px;
+    margin-left: 300px;
+    transform  : rotate(90deg);
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    position   : fixed;
+    width      : 150px;
+    margin-left: 150px;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* LA PELOTA SE VA CENTRANDO SE ACERCA ZOMBIE*/
+@media screen and (min-device-width: 750px) and (max-width: 850px) {
+
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    width      : 50px;
+    margin-top : 20px;
+    margin-left: 350px;
+    transform  : rotate(110deg);
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    position   : fixed;
+    width      : 150px;
+    margin-left: 100px;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* LA PELOTA SE VA CENTRANDO SE ACERCA ZOMBIE*/
+@media screen and (min-device-width: 850px) and (max-width: 950px) {
+
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    width      : 50px;
+    margin-top : 20px;
+    margin-left: 400px;
+    transform  : rotate(120deg);
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    position   : fixed;
+    width      : 150px;
+    margin-left: 50px;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* LA PELOTA SE VA CENTRANDO SE ACERCA ZOMBIE*/
+@media screen and (min-device-width: 950px) and (max-width: 1000px) {
+
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    width      : 50px;
+    margin-top : 20px;
+    margin-left: 450px;
+    transform  : rotate(130deg);
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    position   : fixed;
+    width      : 150px;
+    margin-left: 0px;
+  }
+
+  .explosion {
+    display: none;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* EXPLOSIÓN*/
+@media screen and (min-device-width: 1001px) and (max-width: 1050px) {
+
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    display: none;
+
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    position   : fixed;
+    width      : 300px;
+    margin-left: 400px;
+    bottom     : 40px;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* EXPLOSIÓN MÁS GRANDE*/
+@media screen and (min-device-width: 1050px) and (max-width: 1100px) {
+
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    display: none;
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    position   : fixed;
+    width      : 400px;
+    margin-left: 360px;
+    bottom     : 40px;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* EXPLOSIÓN MÁS MÁS GRANDE*/
+@media screen and (min-device-width: 1101px) and (max-width: 1200px) {
+
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    display: none;
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    position   : fixed;
+    width      : 600px;
+    margin-left: 320px;
+    bottom     : 40px;
+  }
+
+  .boom {
+    display: none;
+  }
+}
+
+/* EXPLOSIÓN MÁS MÁS MÁS GRANDE*/
+@media screen and (min-device-width: 1201px) and (max-width: 1300px) {
+
+  .planta1 {
+    display: none;
+  }
+
+  .pelota {
+    display: none;
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    position   : fixed;
+    width      : 800px;
+    margin-left: 300px;
+    bottom     : 40px;
+  }
+
+  .boom {
+    display: none;
+  }
+
+}
+/* TÍTULO DE FIN*/
+@media screen and (min-device-width: 1300px) {
+
+  .planta1 {
+    display   : fixed;
+    visibility: hidden;
+  }
+
+  .pelota {
+    display: none;
+  }
+
+  .mano {
+    display: none;
+  }
+
+  .zombie {
+    display: none;
+  }
+
+  .explosion {
+    position  : none;
+    visibility: hidden;
+  }
+
+  .boom {
+
+    font-family: 'Silkscreen', cursive;
+    font-size  : 800%;
+    margin-left: 40%;
+  }
+}
